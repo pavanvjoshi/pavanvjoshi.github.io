@@ -34,6 +34,9 @@ jobs:
           # Delete this line once you rename the repo to "pavanvjoshi.github.io".
           NEXT_PUBLIC_BASE_PATH: pavan-joshi-dev
 
+      - name: Disable Jekyll (so GitHub Pages serves _next/ folders)
+        run: touch out/.nojekyll
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
