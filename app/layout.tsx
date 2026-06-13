@@ -24,7 +24,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://pavanjoshi.dev";
+const siteUrl = "https://pavanvjoshi.github.io";
 const description =
   "AI Backend Engineer building production-grade LLM systems with LangGraph, LangChain, and FastAPI. Multi-tenant SaaS architecture, RAG pipelines, and scalable AI infrastructure.";
 
