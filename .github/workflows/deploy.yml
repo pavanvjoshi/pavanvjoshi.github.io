@@ -31,8 +31,8 @@ jobs:
       - name: Build (static export)
         run: npm run build
         env:
-          # Set this to your repo name if the repo is NOT named "pavanvjoshi.github.io".
           # Delete this line once you rename the repo to "pavanvjoshi.github.io".
+          NEXT_PUBLIC_BASE_PATH: pavan-joshi-dev
 
       - uses: actions/configure-pages@v5
 
