@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #faf9f6;
+  color: #14161a;
+}
+
+@layer utilities {
+  /* Subtle grid backdrop */
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(37, 99, 235, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(37, 99, 235, 0.045) 1px, transparent 1px);
+    background-size: 52px 52px;
+  }
+
+  /* Frosted glass surface */
+  .glass {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Gradient border via double background trick */
+  .gradient-border {
+    background:
+      linear-gradient(#faf9f6, #faf9f6) padding-box,
+      linear-gradient(135deg, #2563eb, #4f46e5) border-box;
+    border: 1px solid transparent;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 32px rgba(37, 99, 235, 0.22);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #faf9f6;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6d0c4;
+  border: 2px solid #faf9f6;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b9b2a4;
+}
+
+/* Text selection */
+::selection {
+  background: rgba(37, 99, 235, 0.18);
+  color: #14161a;
+}
+
+/* Honour reduced-motion for CSS animations too */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
