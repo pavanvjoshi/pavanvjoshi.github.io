@@ -10,7 +10,7 @@ export function Education() {
   return (
     <section className="px-6 py-16">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading>Academic Background</SectionHeading>
+        <SectionHeading>where I studied</SectionHeading>
 
         <motion.div
           variants={scaleIn}

@@ -46,7 +46,7 @@ export function Experience() {
   return (
     <section id="experience" className="scroll-mt-24 px-6 py-20">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading>Where I&apos;ve Worked</SectionHeading>
+        <SectionHeading>places I&apos;ve been</SectionHeading>
 
         <div className="relative">
           {/* Timeline spine */}

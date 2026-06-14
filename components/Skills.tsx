@@ -54,7 +54,7 @@ export function Skills() {
         {/* Left: heading sticks while the cards scrub past on the right */}
         <div className="mb-12 lg:sticky lg:top-28 lg:mb-0 lg:h-fit lg:self-start">
           <h2 className="font-heading text-4xl font-bold lg:text-5xl">
-            Core Competencies
+            stuff I actually use
           </h2>
           <p className="mt-5 max-w-xs text-muted">
             The stack behind the systems I ship, from LLM orchestration down to

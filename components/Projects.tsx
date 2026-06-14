@@ -13,7 +13,7 @@ export function Projects() {
     <section id="projects" className="relative scroll-mt-24 px-6 py-20">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.02] to-transparent" />
       <div className="relative mx-auto max-w-6xl">
-        <SectionHeading>What I&apos;ve Built</SectionHeading>
+        <SectionHeading>things I&apos;ve shipped</SectionHeading>
 
         <div className="grid gap-8 md:grid-cols-2">
           {projects.map((project) => (

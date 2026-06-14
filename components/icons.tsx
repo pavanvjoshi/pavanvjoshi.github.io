@@ -123,6 +123,13 @@ export const MapPin = (p: IconProps) => (
   </svg>
 );
 
+export const Send = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M22 2L11 13" />
+    <path d="M22 2L15 22 11 13 2 9l20-7z" />
+  </svg>
+);
+
 // Map string keys (used in data.ts) to icon components.
 export const iconMap = {
   brain: Brain,
