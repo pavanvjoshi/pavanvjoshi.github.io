@@ -2,20 +2,16 @@
 
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
+
 import { navLinks, profile } from "@/lib/data";
 import { Close, Menu } from "./icons";
 
 export function Navbar() {
-  const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string>("");
   const { scrollY } = useScroll();
 
-  // Hide on scroll down, reveal on scroll up. Track active section by position.
   useMotionValueEvent(scrollY, "change", (latest) => {
-    const prev = scrollY.getPrevious() ?? 0;
-    setHidden(latest > prev && latest > 200 && !open);
-
     const sections = navLinks
       .map((l) => document.querySelector(l.href))
       .filter(Boolean) as HTMLElement[];
@@ -31,7 +27,7 @@ export function Navbar() {
     <>
       <motion.nav
         initial={{ y: -100, opacity: 0 }}
-        animate={{ y: hidden ? -120 : 0, opacity: 1 }}
+        animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
         className="fixed inset-x-4 top-4 z-50 mx-auto flex max-w-6xl items-center justify-between rounded-2xl glass px-6 py-4"
       >
